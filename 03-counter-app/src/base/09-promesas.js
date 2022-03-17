@@ -2,20 +2,22 @@
 // const doc = 'https://developer.mozilla.org/es/docs/Web/JavaScript/Reference'
 // console.log(`Hola, ${nombre}`);
 
-import { tomarHeoresById } from "./bases/08-imp-ex";
+import { tomarHeoresById } from "./08-imp-ex";
  
- 
- 
-const promesa = new Promise((resolve, reject) => {
- 
-    setTimeout(() => {
-        const heroe = tomarHeoresById(2);
-        resolve(heroe);
-        // reject('No se pudo encontra el heroe')
-    }, 2000);
- 
-});
- 
-promesa.then((heroe) => {
-    console.log('Heroe', heroe)
-}).catch(err => console.warn(err));
+export const getHeroeByIdAsync = ( id ) => {
+
+    return new Promise( (resolve, reject) => {
+
+        setTimeout( () =>  {
+            // Tarea
+            // importen el 
+            const p1 = tomarHeoresById( id );
+            if ( p1 ) {
+                resolve( p1 );
+            } else {
+                reject( 'No se pudo encontrar el heroe' );
+            }
+        }, 1500 )
+    
+    })
+};
