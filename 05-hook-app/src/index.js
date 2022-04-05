@@ -10,10 +10,13 @@ import ReactDOM from 'react-dom';
 // import { FocusScreen } from './components/04-useRef/FocusScreen';
 // import { RealExample } from './components/04-useRef/RealExample';
 // import { LayoutEffect } from './components/05-useLayoutEffect/LayoutEffect';
-import { Memorize } from './components/06-memos/Memorize';
+// import { Memorize } from './components/06-memos/Memorize';
+// import { MemoHook } from './components/06-memos/MemoHook';
+// import { CallBack } from './components/06-memos/CallBack';
 
+import { Padre } from './components/07-tarea-memo/Padre';
 
 ReactDOM.render(
-  <Memorize />,
+  <Padre />,
   document.getElementById('root')
 );
